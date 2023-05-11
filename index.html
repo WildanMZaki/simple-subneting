@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Subneting</title>
+</head>
+<body>
+    <header>
+        <h1>Subneting</h1>
+    </header>
+
+    <form>
+        <input type="text" id="hostInp" class="host-input" placeholder="Example: 20,30,60,2" onkeypress="return limitChars(event);" onpaste="return preventCopas(event);" required>
+        <button title="" type="submit" class="startSubneting">
+            <b>>></b>
+            <!-- <i class="fas fa-plus-square"></i> -->
+        </button>
+        <div class="div-opt">
+            <select title="select" name="opt" class="option-selected" id="methodSelected">
+                <option value="cidr">CIDR</option>
+                <option value="vlsm">VLSM</option>
+            </select>
+        </div>
+    </form>
+    <!-- <p class="ex"><i>*Ex: 20,30,60,2</i></p> -->
+    <p class="ex timer4s"><i>timer error</i></p>
+    <p class="ex err disapear"><i class="err-text"></i></p>
+
+    <div class="susupercon">
+        <div class="supercon">
+            <div class="result fs-result"></div>
+        </div>
+    </div>
+
+    <div class="resultOpt-btn">
+        <button type="button" id="resultOpt" class="resultOpt advanceOpt disapear">Show More Informations</button>
+    </div>
+
+    <script src="./jquery-3.6.1.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
